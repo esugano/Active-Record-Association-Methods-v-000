@@ -4,6 +4,7 @@ class Song < ActiveRecord::Base
 
   def get_genre_name
     self.genre.collect do |genre|
+      binding.pry
       genre.name
     end
   end
